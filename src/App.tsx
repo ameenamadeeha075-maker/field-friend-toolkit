@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import CropAnalyzer from "./pages/CropAnalyzer";
 import MarketPrices from "./pages/MarketPrices";
-import CropCalendar from "./pages/CropCalendar";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,7 +20,6 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/analyze" element={<CropAnalyzer />} />
           <Route path="/market" element={<MarketPrices />} />
-          <Route path="/calendar" element={<CropCalendar />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
