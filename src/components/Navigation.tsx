@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Home, Camera, TrendingUp, ArrowLeft } from "lucide-react";
+import { Home, Camera, TrendingUp, ArrowLeft, Calendar } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const Navigation = () => {
@@ -46,6 +46,13 @@ const Navigation = () => {
               onClick={() => navigate('/market')}
             >
               <TrendingUp className="h-4 w-4" />
+            </Button>
+            <Button 
+              variant={location.pathname === "/calendar" ? "default" : "ghost"} 
+              size="sm"
+              onClick={() => navigate('/calendar')}
+            >
+              <Calendar className="h-4 w-4" />
             </Button>
           </div>
         </div>

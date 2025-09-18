@@ -203,23 +203,35 @@ const MarketPrices = () => {
         </Card>
 
         {/* AI Recommendations */}
-        <Card className="mt-6">
+        <Card className="mt-6 bg-gradient-to-r from-primary/10 to-secondary/10 border-primary/20">
           <CardHeader>
-            <CardTitle>AI Market Insights</CardTitle>
+            <CardTitle className="flex items-center gap-2">
+              <TrendingUp className="h-5 w-5 text-primary" />
+              AI Market Suggestions
+            </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="space-y-4">
-              <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
-                <h4 className="font-semibold text-green-800 mb-2">Best Time to Sell</h4>
-                <p className="text-sm text-green-700">
-                  Cabbage prices are up 15.7% - consider selling your harvest this week for maximum profit.
-                </p>
+            <div className="space-y-3">
+              <div className="flex items-center gap-3 p-4 bg-green-50 border border-green-200 rounded-lg">
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                <div>
+                  <p className="font-semibold text-green-800 text-sm">Best to sell tomatoes at Central Market today</p>
+                  <p className="text-xs text-green-600">+15% higher price than average - Rs. 207/kg</p>
+                </div>
               </div>
-              <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                <h4 className="font-semibold text-blue-800 mb-2">Price Prediction</h4>
-                <p className="text-sm text-blue-700">
-                  Tomato prices expected to recover by 8-10% next week due to reduced supply from other regions.
-                </p>
+              <div className="flex items-center gap-3 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+                <div>
+                  <p className="font-semibold text-blue-800 text-sm">Hold onions for better price</p>
+                  <p className="text-xs text-blue-600">Expected to rise 20% next week - current Rs. 220/kg</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 p-4 bg-orange-50 border border-orange-200 rounded-lg">
+                <div className="w-3 h-3 rounded-full bg-orange-500"></div>
+                <div>
+                  <p className="font-semibold text-orange-800 text-sm">Cabbage demand is high in Kandy</p>
+                  <p className="text-xs text-orange-600">Transport to Kandy for 25% premium - Rs. 106/kg</p>
+                </div>
               </div>
             </div>
           </CardContent>
